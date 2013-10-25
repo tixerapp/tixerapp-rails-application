@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @revision.user %>
+</p>
+
+<p>
+  <strong>Document:</strong>
+  <%= @revision.document %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @revision.content %>
+</p>
+
+<p>
+  <strong>Mimetype:</strong>
+  <%= @revision.mimetype %>
+</p>
+
+<%= link_to 'Edit', edit_revision_path(@revision) %> |
+<%= link_to 'Back', revisions_path %>

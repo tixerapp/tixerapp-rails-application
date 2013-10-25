@@ -1,0 +1,15 @@
+<%= simple_form_for(@colleague) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :follower %>
+    <%= f.association :following %>
+    <%= f.input :accepted %>
+    <%= f.input :follower_blocked %>
+    <%= f.input :following_blocked %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

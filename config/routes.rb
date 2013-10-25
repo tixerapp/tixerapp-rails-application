@@ -1,4 +1,43 @@
 TixerApp::Application.routes.draw do
+  resources :attendances
+
+  resources :activities
+
+  resources :comments
+
+  resources :revisions
+
+  resources :bookmarks
+
+  resources :documents
+
+  resources :answers
+
+  resources :questions
+
+  resources :levels
+
+  resources :topics
+
+  resources :chats
+
+  resources :colleagues
+
+  resources :respects
+
+  resources :recommendations
+
+  resources :publications
+
+  resources :jobs
+
+  resources :studies
+
+  resources :timelines
+
+  devise_for :users
+  resources :organizations
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

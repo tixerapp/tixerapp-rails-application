@@ -1,0 +1,131 @@
+Organization:
+    name: string
+    kind: string
+    website: string
+    content: string
+    address: text
+    avatar: has_attached_file
+    lat: float
+    lng: float
+
+User:
+    treatment: string
+    first_name: string
+    last_name: string
+    nick_name: string
+    date_of_birth: date
+    avatar: has_attached_file
+
+Timeline:
+    user: references
+    route: string
+    content: text
+    hidden: boolean
+
+Study:
+    user: references
+    organization: references
+    degree: string
+    content: text
+    started_at: date
+    finished_at: date
+    is_current: boolean
+
+Job:
+    user: references
+    organization: references
+    position: string
+    content: text
+    started_at: date
+    finished_at: date
+    is_current: boolean
+
+Publication:
+    user: references
+    organization: references
+    title: text
+    content: text
+    published_at: date
+
+Recommendation:
+    user: references
+    recommender: references
+    content: text
+    accepted: boolean
+
+Respect:
+    user: references
+    colleague: references
+    blocked: boolean
+
+Colleague:
+    follower: references
+    following: references
+    accepted: boolean
+    follower_blocked: boolean
+    following_blocked: boolean
+
+Chat:
+    sender: references
+    recipient: references
+    content: text
+    read: boolean
+
+Topic:
+    name: string
+
+Level:
+    name: string
+
+Question:
+    user: references
+    topic: references
+    name: string
+    content: text
+    status: string
+
+Answer:
+    user: references
+    question: references
+    content: string
+
+Document:
+    user: references
+    topic: references
+    level: references
+    name: string
+    kind: string
+    content: text
+
+Bookmark:
+    user: references
+    document: references
+    note: text
+
+Revision:
+    user: references
+    document: references
+    content: text
+    mimetype: string
+    content: has_attached_file
+
+Comment:
+    document: references
+    user: references
+    content: text
+
+Activity:
+    user: references
+    name: string
+    website: string
+    content: string
+    avatar: has_attached_file
+    address: text
+    started_at: datetime
+    finished_at: datetime
+    privacy: string
+
+Attendance:
+    user: references
+    activity: references
+    rsvp: string

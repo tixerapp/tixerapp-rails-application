@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @respect.user %>
+</p>
+
+<p>
+  <strong>Colleague:</strong>
+  <%= @respect.colleague %>
+</p>
+
+<p>
+  <strong>Blocked:</strong>
+  <%= @respect.blocked %>
+</p>
+
+<%= link_to 'Edit', edit_respect_path(@respect) %> |
+<%= link_to 'Back', respects_path %>

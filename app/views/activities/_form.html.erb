@@ -1,0 +1,19 @@
+<%= simple_form_for(@activity) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.input :name %>
+    <%= f.input :website %>
+    <%= f.input :content %>
+    <%= f.input :avatar %>
+    <%= f.input :address %>
+    <%= f.input :started_at %>
+    <%= f.input :finished_at %>
+    <%= f.input :privacy %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

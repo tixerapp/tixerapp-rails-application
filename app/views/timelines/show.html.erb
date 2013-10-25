@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @timeline.user %>
+</p>
+
+<p>
+  <strong>Route:</strong>
+  <%= @timeline.route %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @timeline.content %>
+</p>
+
+<p>
+  <strong>Hidden:</strong>
+  <%= @timeline.hidden %>
+</p>
+
+<%= link_to 'Edit', edit_timeline_path(@timeline) %> |
+<%= link_to 'Back', timelines_path %>

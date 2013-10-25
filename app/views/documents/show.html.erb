@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @document.user %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @document.topic %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @document.level %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @document.name %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @document.kind %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @document.content %>
+</p>
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

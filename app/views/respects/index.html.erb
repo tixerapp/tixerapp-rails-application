@@ -1,0 +1,31 @@
+<h1>Listing respects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Colleague</th>
+      <th>Blocked</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @respects.each do |respect| %>
+      <tr>
+        <td><%= respect.user %></td>
+        <td><%= respect.colleague %></td>
+        <td><%= respect.blocked %></td>
+        <td><%= link_to 'Show', respect %></td>
+        <td><%= link_to 'Edit', edit_respect_path(respect) %></td>
+        <td><%= link_to 'Destroy', respect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Respect', new_respect_path %>

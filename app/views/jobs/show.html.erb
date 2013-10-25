@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @job.user %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @job.organization %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @job.position %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @job.content %>
+</p>
+
+<p>
+  <strong>Started at:</strong>
+  <%= @job.started_at %>
+</p>
+
+<p>
+  <strong>Finished at:</strong>
+  <%= @job.finished_at %>
+</p>
+
+<p>
+  <strong>Is current:</strong>
+  <%= @job.is_current %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

@@ -1,0 +1,13 @@
+<%= simple_form_for(@respect) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.association :colleague %>
+    <%= f.input :blocked %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

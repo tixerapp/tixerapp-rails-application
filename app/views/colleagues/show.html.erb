@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Follower:</strong>
+  <%= @colleague.follower %>
+</p>
+
+<p>
+  <strong>Following:</strong>
+  <%= @colleague.following %>
+</p>
+
+<p>
+  <strong>Accepted:</strong>
+  <%= @colleague.accepted %>
+</p>
+
+<p>
+  <strong>Follower blocked:</strong>
+  <%= @colleague.follower_blocked %>
+</p>
+
+<p>
+  <strong>Following blocked:</strong>
+  <%= @colleague.following_blocked %>
+</p>
+
+<%= link_to 'Edit', edit_colleague_path(@colleague) %> |
+<%= link_to 'Back', colleagues_path %>

@@ -1,0 +1,14 @@
+<%= simple_form_for(@recommendation) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.association :recommender %>
+    <%= f.input :content %>
+    <%= f.input :accepted %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @study.user %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @study.organization %>
+</p>
+
+<p>
+  <strong>Degree:</strong>
+  <%= @study.degree %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @study.content %>
+</p>
+
+<p>
+  <strong>Started at:</strong>
+  <%= @study.started_at %>
+</p>
+
+<p>
+  <strong>Finished at:</strong>
+  <%= @study.finished_at %>
+</p>
+
+<p>
+  <strong>Is current:</strong>
+  <%= @study.is_current %>
+</p>
+
+<%= link_to 'Edit', edit_study_path(@study) %> |
+<%= link_to 'Back', studies_path %>

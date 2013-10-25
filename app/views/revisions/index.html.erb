@@ -1,0 +1,33 @@
+<h1>Listing revisions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Document</th>
+      <th>Content</th>
+      <th>Mimetype</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @revisions.each do |revision| %>
+      <tr>
+        <td><%= revision.user %></td>
+        <td><%= revision.document %></td>
+        <td><%= revision.content %></td>
+        <td><%= revision.mimetype %></td>
+        <td><%= link_to 'Show', revision %></td>
+        <td><%= link_to 'Edit', edit_revision_path(revision) %></td>
+        <td><%= link_to 'Destroy', revision, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Revision', new_revision_path %>

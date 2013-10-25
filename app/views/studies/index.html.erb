@@ -1,0 +1,39 @@
+<h1>Listing studies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Organization</th>
+      <th>Degree</th>
+      <th>Content</th>
+      <th>Started at</th>
+      <th>Finished at</th>
+      <th>Is current</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studies.each do |study| %>
+      <tr>
+        <td><%= study.user %></td>
+        <td><%= study.organization %></td>
+        <td><%= study.degree %></td>
+        <td><%= study.content %></td>
+        <td><%= study.started_at %></td>
+        <td><%= study.finished_at %></td>
+        <td><%= study.is_current %></td>
+        <td><%= link_to 'Show', study %></td>
+        <td><%= link_to 'Edit', edit_study_path(study) %></td>
+        <td><%= link_to 'Destroy', study, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Study', new_study_path %>

@@ -1,0 +1,35 @@
+<h1>Listing colleagues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Follower</th>
+      <th>Following</th>
+      <th>Accepted</th>
+      <th>Follower blocked</th>
+      <th>Following blocked</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @colleagues.each do |colleague| %>
+      <tr>
+        <td><%= colleague.follower %></td>
+        <td><%= colleague.following %></td>
+        <td><%= colleague.accepted %></td>
+        <td><%= colleague.follower_blocked %></td>
+        <td><%= colleague.following_blocked %></td>
+        <td><%= link_to 'Show', colleague %></td>
+        <td><%= link_to 'Edit', edit_colleague_path(colleague) %></td>
+        <td><%= link_to 'Destroy', colleague, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Colleague', new_colleague_path %>
