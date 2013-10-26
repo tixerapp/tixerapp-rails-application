@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="#{Author Name}">
+		<meta name="description" content="#{Project Name}">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		<title>#{Project Name}</title>
+		<!--[if IE]>
+			<script src="://html5shiv.googlecode.com/svn/trunk/html5.js" /></script>
+		<![endif]-->
+
+		<%= stylesheet_link_tag "application", :media => "all", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= image_path "app-icons/apple-touch-icon-144-precomposed.png" %>">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= image_path "app-icons/apple-touch-icon-114-precomposed.png" %>">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= image_path "app-icons/apple-touch-icon-72-precomposed.png" %>">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= image_path "app-icons/apple-touch-icon-57-precomposed.png" %>">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<%= image_path "app-icons/apple-touch-icon-57-precomposed.png" %>">
+	<link rel="apple-touch-icon" href="<%= image_path "app-icons/apple-touch-icon.png" %>">
+    <link rel="shortcut icon" href="<%= image_path "app-icons/favicon.png" %>">
+
+	</head>
+	<body>
+		<!-- development output -->
+		<div class="hide">
+			<div id="qunit"></div>
+			<div id="qunit-fixture"></div>
+		</div>
+		<!-- end of development output -->
+
+		<div class="container">
+			<%= yield %>
+		</div>
+
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	</body>
+
+</html>
